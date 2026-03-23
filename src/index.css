@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Geist, monospace, sans-serif;
+  user-select: none;
+  /* Geist my beloved */
+}
+
+:root {
+  --text-color: #2e2e2e;
+  --text-placeholder-color: oklch(from var(--text-color) calc(l + 0.4) c h);
+  --main-color: #F76B22;
+  --background-color: #fff;
+}

@@ -1,0 +1,87 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.horizontal_bar {
+    width: 100%;
+    background: #ffd3af;
+    height: 8dvh;
+    position: fixed;
+    z-index: 50;
+    padding-left: calc(17% + 10px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.left_side {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.right_side {
+    display: flex;
+    align-items: center;
+}
+
+.vertical_bar {
+    width: 17%;
+    height: 100dvh;
+    padding-top: 60px;
+    background: #fff;
+    position: fixed;
+    z-index: 100;
+}
+
+.page_atual {
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+.img_link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lmc_logo {
+    height: 70%;
+}
+
+.configuracoes_popovergear {
+    margin-right: 20px;
+    height: 60%;
+    width: 50px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    background-size: fit;
+    anchor-name: --gear;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 26 26' fill='none' stroke='black' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'><g vector-effect='non-scaling-stroke'><path d='M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915'/><circle cx='12' cy='12' r='3'/></g></svg>");
+}
+
+.configuracoes_botao_container {
+    display: block;
+    background-color: #ffc08c;
+    position: fixed;
+    position-anchor: --gear;
+    position-area: bottom;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.configuracoes_botao {
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.configuracoes_botao:hover {
+    background-color: #d66000;
+}
