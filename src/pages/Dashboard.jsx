@@ -41,6 +41,41 @@ export function Dashboard() {
             </div>
 
 
+            <div className={styles.area_grid}>
+
+                <div className={styles.programacao}>
+                    <div className={styles.prog_header}>
+                        <h1>Programação</h1>
+                        <button>Criar Programação</button>
+                    </div>
+
+                    <div className={styles.prog_content}>
+                        <h3>Criado por último</h3>
+                        <div className={styles.prog_info}>
+                            <img src=""/>
+                            <div>
+                                <h3 id={styles.prog_titulo}>Programação-(dia)</h3>
+                                <p id={styles.prog_horario}>*horário*</p>
+                                <p>Possui horários fixos</p>
+                                <p>Inserções: padrão</p>
+                                <p>Perfil</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div className={styles.profile}>
+                    <div className={styles.profile_header}>
+                        <h1>Perfis</h1>
+                        <button>Ver Perfis</button>
+                    </div>
+                    <h1>a</h1>
+                    <div className={styles.profile_content}></div>
+                </div>
+            </div>
+            
         </main>
     )
 }
