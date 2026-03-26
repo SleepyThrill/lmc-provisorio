@@ -4,10 +4,24 @@
     display: flex;
 }
 
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #ea651ee0;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background: #333333cb;
+}
+
 .horizontal_bar {
     width: 100%;
     background: #ffd3af;
     height: 8dvh;
+    min-height: 74px;
     position: fixed;
     z-index: 50;
     display: flex;
@@ -28,6 +42,7 @@
 .vertical_bar {
     width: 17%;
     height: 100dvh;
+    min-height: 100%;
     padding-top: 60px;
     background: #fff;
     position: fixed;
@@ -101,6 +116,8 @@
 .programacao{
     width: 80%;
     height: 30vh;
+    min-width: 552px;
+    min-height: 234px;
     margin-left: auto;
     border-radius: 10px;
     box-shadow: 0 0 15px #00000056;
@@ -142,7 +159,6 @@
     width: 100%;
     height: 25vh;
     display: grid;
-    grid-template-columns: 1fr;
 }
 
 .prog_content h3{
@@ -179,6 +195,8 @@
 .profile{
     width: 80%;
     height: 30vh;
+    min-width: 552px;
+    min-height: 234px;
     margin-right: auto;
     border-radius: 10px;
     box-shadow: 0 0 15px #00000056;
@@ -208,9 +226,127 @@
     background-color: #F39911;
 }
 
+.profile_header button:hover{
+    cursor: pointer;
+    background-color: #ffa012;
+}
+
+.profile_header button:active{
+    background-color: #db8a10;
+}
+
 .profile_content{
     width: 100%;
     height: 25vh;
     display: grid;
-    grid-template-columns: 1fr;
+    place-items: center;
+    font-size: 18px;
+}
+
+.profile_content h3{
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: 15px;
+    font-size: 21px;
+    font-weight: 500;
+    color: #7474749d;
+}
+
+.prof_info{
+    width: 100%;
+    height: 14vh;
+    min-width: 552px;
+    min-height: 131px;
+    max-height: 14vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    scrollbar-gutter: stable;
+}
+
+.prof_info h3{
+    color: #000;
+}
+
+.prof_info:hover{
+    overflow-y: auto;
+}
+
+.prof_info::-webkit-scrollbar-track{
+    border-radius: 20px;
+}
+
+.perfil{
+    width: 90%;
+    height: 10vh;
+    min-width: 488px;
+    min-height: 93px;
+    margin-top: 13px;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: auto 1fr 0.6fr;
+    place-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #0000002f;
+}
+
+.perfil img{
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+}
+
+#perf_titulo{
+    font-size: 21px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.perfil p{
+    font-size: 17px;
+    max-width: 200px;
+    max-height: 70px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+    scrollbar-gutter: stable;
+    color: #747474;
+}
+
+.perfil p:hover{
+    overflow-y: auto;
+}
+
+.perfil p::-webkit-scrollbar-track{
+    background: #33333373;
+    border-radius: 20px;
+}
+
+.perfil p::-webkit-scrollbar-thumb{
+    background: #d3d3d3be;
+}
+
+.perfil div{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.perfil button{
+    width: 95px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #F39911;
+}
+
+.perfil button:hover{
+    cursor: pointer;
+    background-color: #ffa012;   
+}
+
+.perfil button:active{
+    background-color: #db8a10;
 }

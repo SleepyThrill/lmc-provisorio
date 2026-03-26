@@ -2,6 +2,7 @@ import styles from './Dashboard.module.css';
 import lmc_logo from '../assets/lmcplusv2.png'
 import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Subtitles } from 'lucide-react';
 
 export function Dashboard() {
     const navigate = useNavigate();
@@ -71,8 +72,22 @@ export function Dashboard() {
                         <h1>Perfis</h1>
                         <button>Ver Perfis</button>
                     </div>
-                    <h1>a</h1>
-                    <div className={styles.profile_content}></div>
+
+                    <div className={styles.profile_content}>
+                        <h3>Usados Recentemente</h3>
+                        <div className={styles.prof_info}>
+                            <div className={styles.perfil}>
+                                <div>
+                                    <img src=""/>
+                                    <h3 id={styles.perf_titulo}>Perfil 1</h3>
+                                </div>
+                                <p>Sem Descrição</p>
+                                
+                                <button>Usar Perfil</button>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
             
