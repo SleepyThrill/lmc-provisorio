@@ -102,11 +102,28 @@
     background-color: #d66000;
 }
 
-.area_grid{
+.area{
+    width: 100%;
+    height: 100dvh;
+    min-width: 100%;
+    min-height: 100dvh;
+    padding: 8dvh 0% 0 17%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+
+.area button{
+    color: #fff;
+    background-color: #EA641E;
+    border: none;
+    border-radius: 10px;
+}
+
+.area_prog_perf{
     width: 70%;
     height: 35vh;
-    margin-top: 13vh;
-    margin-left: 23%;
+    min-width: 1200px;
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 1fr;
@@ -118,6 +135,8 @@
     height: 30vh;
     min-width: 552px;
     min-height: 234px;
+    max-width: 552px;
+    max-height: 300px;
     margin-left: auto;
     border-radius: 10px;
     box-shadow: 0 0 15px #00000056;
@@ -144,12 +163,12 @@
     border: none;
     font-size: 0.9em;
     color: #fff;
-    background-color: #F39911;
+    background-color: #EA641E;
 }
 
 .prog_header button:hover{
     cursor: pointer;
-    background-color: #ffa012;
+    background-color: #d15b1b;
 }
 
 .prog_header button:active{
@@ -197,6 +216,8 @@
     height: 30vh;
     min-width: 552px;
     min-height: 234px;
+    max-width: 552px;
+    max-height: 300px;
     margin-right: auto;
     border-radius: 10px;
     box-shadow: 0 0 15px #00000056;
@@ -223,12 +244,12 @@
     border: none;
     font-size: 0.9em;
     color: #fff;
-    background-color: #F39911;
+    background-color: #EA641E;
 }
 
 .profile_header button:hover{
     cursor: pointer;
-    background-color: #ffa012;
+    background-color: #d15b1b;
 }
 
 .profile_header button:active{
@@ -349,4 +370,105 @@
 
 .perfil button:active{
     background-color: #db8a10;
+}
+
+.guias{
+    width: 70%;
+    height: 35vh;
+    min-width: 1124px;
+    max-width: 1124px;
+    min-height: 234px;
+    display: grid;
+    grid-template-rows: 0.4fr 1fr;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00000056;
+}
+
+.guias button{
+    width: 150px;
+    height: 30px;
+    font-size: 1em;
+    background-color: #F39911;
+    border-radius: 20px;
+}
+
+.guias button:hover{
+    cursor: pointer;
+    background-color: #ffa012;
+}
+
+.guias button:active{
+    background-color: #db8a10;
+}
+
+.guias_header{
+    display: flex;
+    padding: 5px 15px 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.guias_header h1{
+    color: #EA641E;
+}
+
+.guias_header button{
+    width: 150px;
+    height: 35px;
+    font-size: 1em;
+    background-color: #EA641E;
+    border-radius: 10px;
+}
+
+.guias_header button:hover{
+    cursor: pointer;
+    background-color: #d15b1b;
+}
+
+.guias_header button:active{
+    background-color: #db8a10;
+}
+
+.guias_content{
+    display: grid;
+    place-items: center;
+    padding-bottom: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.guias_content h1{
+    font-weight: 570;
+}
+
+.guias_content h2{
+    width: 300px;
+    color: #747474;
+    font-weight: 500;
+}
+
+.guias_elemento{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #00000056;
+}
+
+.guias_elemento h1{
+    width: 100%;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.guias_elemento h2{
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.guias_elemento button{
+    height: 45px;
+    font-size: 1em;
+    margin-left: auto;
 }
