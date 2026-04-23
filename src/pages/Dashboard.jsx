@@ -20,35 +20,36 @@ export function Dashboard() {
     return (
         <main className={styles.main}>
             <nav className={styles.vertical_bar}>
-                <button className={`${styles.menubtn} ${styles.inicio}`}>
-                    <img src={casa} width="40" height="40"/>
-                    <span>Início</span>
-                </button>
-
-                <div className={styles.area1}>
-                    <button className={`${styles.menubtn} ${styles.parent_btn}`}>
-                        <img src={tabela} width="40" height="40"/>
-                        <span>Programação</span>
+                <div className={styles.area_overflow}>
+                    <button className={`${styles.menubtn} ${styles.inicio}`}>
+                        <img src={casa} width="40" height="40"/>
+                        <span>Início</span>
                     </button>
-                    <button className={styles.menubtn}>Criar nova</button>
-                    <button className={styles.menubtn}>Minhas Programações</button>
-                </div>
 
-                <button className={`${styles.menubtn} ${styles.parent_btn}`}>
-                    <img src={user} width="40" height="40"/>
-                    <span>Perfis</span>
-                </button>
+                    <div className={styles.area1}>
+                        <button className={`${styles.menubtn} ${styles.parent_btn}`}>
+                            <img src={tabela} width="40" height="40"/>
+                            <span>Programação</span>
+                        </button>
+                        <button className={styles.menubtn}>Criar nova</button>
+                        <button className={styles.menubtn}>Minhas Programações</button>
+                    </div>
 
-                <div className={styles.area2}>
                     <button className={`${styles.menubtn} ${styles.parent_btn}`}>
-                        <img src={diario} width="40" height="40"/>
-                        <span>Guias</span>
+                        <img src={user} width="40" height="40"/>
+                        <span>Perfis</span>
                     </button>
-                    <button className={styles.menubtn}>Uso de perfis</button>
-                    <button className={styles.menubtn}>Criação de tabela</button>
-                    <button className={styles.menubtn}>Inserções</button>
-                </div>
 
+                    <div className={styles.area2}>
+                        <button className={`${styles.menubtn} ${styles.parent_btn}`}>
+                            <img src={diario} width="40" height="40"/>
+                            <span>Guias</span>
+                        </button>
+                        <button className={styles.menubtn}>Uso de perfis</button>
+                        <button className={styles.menubtn}>Criação de tabela</button>
+                        <button className={styles.menubtn}>Inserções</button>
+                    </div>
+                </div>
             </nav>
 
 
@@ -113,8 +114,6 @@ export function Dashboard() {
                                         <img src=""/>
                                         <h3 id={styles.perf_titulo}>Perfil 1</h3>
                                     </div>
-                                    <p>Sem Descrição</p>
-                                    
                                     <button>Usar Perfil</button>
                                 </div>
                                 
@@ -122,49 +121,56 @@ export function Dashboard() {
                         </div>
                     </div>
                 </div>
-                
-                <div className={styles.guias}>
-                    <div className={styles.guias_header}>
-                        <h1>Guias</h1>
-                        <button>Ir para Guias</button>
-                    </div>
-                    <div className={styles.guias_content}>
-                        <div className={styles.guias_elemento}>
-                            <div>
-                                <h1>Uso de perfis de tabela</h1>
-                                <h2>
-                                    O que são perfis, como criar e
-                                    como utilizar um perfil existente.
-                                </h2>
-                            </div>
-                            <button>Ir para Guia</button>
+
+                <div className={styles.area_guias}>
+
+                    <div className={styles.guias}>
+                        <div className={styles.guias_header}>
+                            <h1>Guias</h1>
+                            <button>Ir para Guias</button>
                         </div>
-                        <div className={styles.guias_elemento}>
-                            <div>
-                                <h1>Criação de tabela</h1>
-                                <h2>
-                                    Explicações sobre como a adição
-                                    de programas e inserções funciona.
-                                </h2>
+                        <div className={styles.guias_content}>
+                            <div className={styles.guias_elemento}>
+                                <div>
+                                    <h1>Uso de perfis de tabela</h1>
+                                    <h2>
+                                        O que são perfis, como criar e
+                                        como utilizar um perfil existente.
+                                    </h2>
+                                </div>
+                                <button>Ir para Guia</button>
                             </div>
-                            <button>Ir para guia</button>
+                            <div className={styles.guias_elemento}>
+                                <div>
+                                    <h1>Criação de tabela</h1>
+                                    <h2>
+                                        Explicações sobre como a adição
+                                        de programas e inserções funciona.
+                                    </h2>
+                                </div>
+                                <button>Ir para guia</button>
+                            </div>
                         </div>
                     </div>
+
                 </div>
                 
+                <div className={styles.area_importar}>
 
-                <div className={styles.importar}>
-                    <div className={styles.importar_1}>
-                        <h1>Importar arquivo</h1>
-                        <h2>Importe uma tabela a partir de outro arquivo externo</h2>
+                    <div className={styles.importar}>
+                        <div className={styles.importar_1}>
+                            <h1>Importar arquivo</h1>
+                            <h2>Importe uma tabela a partir de outro arquivo externo</h2>
+                        </div>
+        
+                        <div className={styles.importar_2}>
+                            <h2>Arquivos suportados
+                                <p>.xlsx .tsv .xlsb .ods</p>
+                            </h2>
+                            <button>Importar</button>
+                        </div>
                     </div>
 
-                    <div className={styles.importar_2}>
-                        <h2>Arquivos suportados
-                            <p>.xlsx .tsv .xlsb .ods</p>
-                        </h2>
-                        <button>Importar</button>
-                    </div>
                 </div>
 
 
