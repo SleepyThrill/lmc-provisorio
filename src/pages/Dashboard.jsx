@@ -16,10 +16,11 @@ export function Dashboard() {
     };
 
     const [open, setOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <main className={styles.main}>
-            <nav className={styles.vertical_bar}>
+            <nav className={`${styles.vertical_bar} ${menuOpen ? styles.open : ""}`}>
                 <div className={styles.area_overflow}>
                     <button className={`${styles.menubtn} ${styles.inicio}`}>
                         <img src={casa} width="40" height="40"/>
@@ -52,9 +53,19 @@ export function Dashboard() {
                 </div>
             </nav>
 
+            {open && (
+                <div className={styles.overlay} onClick={() => setOpen(false)}/>
+            )}
+
 
             <div className={styles.horizontal_bar}>
                 <div className={styles.left_side}>
+
+                    <button 
+                    className={`${styles.hamburger} ${menuOpen ? styles.active : styles.inactive}`}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    >☰</button>
+
                     <Link className={styles.img_link} onClick={irHome}><img src={lmc_logo} alt="Logo LMC" height="128px" className={styles.lmc_logo}></img></Link>
                     <span className={styles.page_atual}>Dashboard</span>
                 </div>
@@ -160,7 +171,7 @@ export function Dashboard() {
                     <div className={styles.importar}>
                         <div className={styles.importar_1}>
                             <h1>Importar arquivo</h1>
-                            <h2>Importe uma tabela a partir de outro arquivo externo</h2>
+                            <h2 className={styles.importar_info}>Importe uma tabela a partir de outro arquivo externo</h2>
                         </div>
         
                         <div className={styles.importar_2}>
