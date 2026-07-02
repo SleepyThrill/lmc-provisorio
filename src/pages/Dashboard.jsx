@@ -7,6 +7,8 @@ import diario from '../assets/diario.png'
 import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Subtitles } from 'lucide-react';
+import TopNavbar from "../components/TopNavbar.jsx";
+import SideNavbar from "../components/SideNavbar";
 
 export function Dashboard() {
     const navigate = useNavigate();
@@ -20,74 +22,29 @@ export function Dashboard() {
 
     return (
         <main className={styles.main}>
-            <nav className={`${styles.vertical_bar} ${menuOpen ? styles.open : ""}`}>
-                <div className={styles.area_overflow}>
-                    <button className={`${styles.menubtn} ${styles.inicio}`}>
-                        <img src={casa} width="40" height="40"/>
-                        <span>Início</span>
-                    </button>
 
-                    <div className={styles.area1}>
-                        <button className={`${styles.menubtn} ${styles.parent_btn}`}>
-                            <img src={tabela} width="40" height="40"/>
-                            <span>Programação</span>
-                        </button>
-                        <button className={styles.menubtn}>Criar nova</button>
-                        <button className={styles.menubtn}>Minhas Programações</button>
-                    </div>
-
-                    <button className={`${styles.menubtn} ${styles.parent_btn}`}>
-                        <img src={user} width="40" height="40"/>
-                        <span>Perfis</span>
-                    </button>
-
-                    <div className={styles.area2}>
-                        <button className={`${styles.menubtn} ${styles.parent_btn}`}>
-                            <img src={diario} width="40" height="40"/>
-                            <span>Guias</span>
-                        </button>
-                        <button className={styles.menubtn}>Uso de perfis</button>
-                        <button className={styles.menubtn}>Criação de tabela</button>
-                        <button className={styles.menubtn}>Inserções</button>
-                    </div>
-                </div>
-            </nav>
+            {/* Chama o componente da nav vertical esquerda */}
+            <SideNavbar menuOpen={menuOpen} />
 
             {open && (
                 <div className={styles.overlay} onClick={() => setOpen(false)}/>
             )}
 
-
-            <div className={styles.horizontal_bar}>
-                <div className={styles.left_side}>
-
-                    <button 
-                    className={`${styles.hamburger} ${menuOpen ? styles.active : styles.inactive}`}
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    >☰</button>
-
-                    <Link className={styles.img_link} onClick={irHome}><img src={lmc_logo} alt="Logo LMC" height="128px" className={styles.lmc_logo}></img></Link>
-                    <span className={styles.page_atual}>Dashboard</span>
-                </div>
-
-                <div className={styles.right_side}>
-                    <button className={styles.configuracoes_popovergear} onClick={() => setOpen(!open)}></button>
-                </div>
-
-                {open && (
-                    <div className={styles.configuracoes_botao_container}>
-                        <div className={styles.configuracoes_botao}>Perfil</div>
-                        <div className={styles.configuracoes_botao}>Acesso</div>
-                        <div className={styles.configuracoes_botao}>Aparência</div>
-                        <div className={styles.configuracoes_botao}>Acessibilidade</div>
-                        <div className={styles.configuracoes_botao}>Autenticação</div>
-                    </div>
-                )}
-            </div>
-
+            {/* Chama o componente da nav horizontal no topo */}
+            <TopNavbar
+                open={open}
+                setOpen={setOpen}
+                menuOpen={menuOpen}
+                setMenuOpen={setMenuOpen}
+            />
+            
+            {/* Área do conteúdo principal */}
             <div className={styles.area}>
+
+                {/* Área da programação e profile */}
                 <div className={styles.area_prog_perf}>
 
+                    {/* Programação */}
                     <div className={styles.programacao}>
                         <div className={styles.prog_header}>
                             <h1>Programação</h1>
@@ -111,6 +68,7 @@ export function Dashboard() {
 
                     </div>
 
+                    {/* Profile */}
                     <div className={styles.profile}>
                         <div className={styles.profile_header}>
                             <h1>Perfis</h1>
@@ -133,8 +91,11 @@ export function Dashboard() {
                     </div>
                 </div>
 
+
+                {/* Área guias */}
                 <div className={styles.area_guias}>
 
+                    {/* Guias */}
                     <div className={styles.guias}>
                         <div className={styles.guias_header}>
                             <h1>Guias</h1>
@@ -166,8 +127,10 @@ export function Dashboard() {
 
                 </div>
                 
+                {/* Área importar */}
                 <div className={styles.area_importar}>
 
+                    {/* Importar */}
                     <div className={styles.importar}>
                         <div className={styles.importar_1}>
                             <h1>Importar arquivo</h1>
