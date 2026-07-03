@@ -1,111 +1,55 @@
 .vertical_bar {
-    width: 327px;
-    height: calc(100vh - 80px);
-    top: 80px;
+    width: 120px;
+    height: calc(100vh - 65px);
+    top: 65px;
+    overflow-y:auto;
     padding-top: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: #fff;
+    background: #f8f8fa;
     position: fixed;
     z-index: 30;
-    outline: 1px solid #ffd3af;
+    outline: 1px solid #d7d7da;
 }
 
-.area_overflow{
+.areaButton{
     width: 100%;
-    height: 100%;
+    height: 100px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;
-    scrollbar-gutter: stable;
-}
-
-.area_overflow div{
-    width: 300px;
-    display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    background-color: #f0e2d9;
-}
-
-.menubtn{
-    width: 288px;
-    height: 40px;
-    padding: 0 10px;
     margin-bottom: 10px;
-    border-radius: 20px;
-    font-size: 1em;
-    background-color: #FFEBDE;
-    color: #3f3f3f;
+}
+
+.button{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
     border: none;
-    box-shadow: 0px 2px #dac9bd;
+    border-radius: 12px;
+    box-shadow: 0 3px #b4b4b4;
+    background: #eeeeee;
+    transition: filter 0.1s ease;
 }
 
-.menubtn:hover{
+.button:hover{
     cursor: pointer;
-    background-color: #FFCCAA;
+    filter: brightness(95%);
 }
 
-.menubtn:active{
-    background-color: #ecbe9e;
+.button img{
+    opacity: 80%;
 }
 
-.inicio{
-    width: 300px;
-    height: 50px;
-    min-height: 50px;
-    display: grid;
-    grid-template-columns: 0.1fr 1fr;
-    gap: 8px;
-    margin-bottom: 15px;
-    align-items: center;
-    border-radius: 10px;
-    font-size: 1.2em;
-    font-weight: 600;
-    text-align: left;
-    background-color: #FFCCAA;
-    box-shadow: none;
-}
-
-.inicio:hover{
-    background-color: #FFCCAA;
-}
-
-.parent_btn{
-    width: 300px;
-    height: 50px;
-    display: grid;
-    grid-template-columns: 0.1fr 1fr;
-    gap: 8px;
-    margin-bottom: 15px;
-    align-items: center;
-    border-radius: 10px;
-    font-size: 1.2em;
-    font-weight: 600;
-    text-align: left;
-    background-color: #FFEBDE;
-    box-shadow: 0px 2px #dac9bd;
-}
-
-.page_atual {
-    font-size: 1.2em;
-    margin-left: 10px;
-}
-
-.img_link {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+.config{
+    margin-top: auto;
 }
 
 @media (max-width: 1220px){
     .vertical_bar{
+        width: 164px;
         transform: translateX(-100%);
         transition: transform .3s ease;
     }

@@ -1,25 +1,108 @@
 .horizontal_bar {
     width: 100%;
-    background: #ffd3af;
-    height: 8dvh;
-    min-height: 80px;
+    background: #f8f8fa;
+    border-bottom: 1px solid #d7d7da;
+    height: 65px;
     position: fixed;
     z-index: 50;
     display: flex;
-    justify-content: space-between;
 }
 
 .hamburger{
     display: none;
 }
 
+.img_link{
+    margin-right: 10px;
+}
+
 .img_link img{
     margin-left: 10px;
 }
 
-.page_atual{
+.tabs{
+    width: 90%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.tab{
+    min-width: 120px;
+    max-width: 200px;
+    height: 65px;
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #d7d7da;
+    border-inline: 1px solid #d7d7da;
+    background: #f8f8fa;
+}
+
+.tab:hover{
+    cursor: default;
+    filter: brightness(97%);
+}
+
+.tab span{
+    margin-right: auto;
+    margin-left: 8px;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.inicio{
+    background: #FFF1EA;
+}
+
+.closeTab{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 20px;
+    background: none;
+    transition: background 0.2s ease;
+}
+
+.closeTab:hover{
+    color: #fff;
+    background: #ff3d3d;
+    cursor: pointer;
+}
+
+.openTab{
+    width: 30px;
+    height: 30px;
     margin-left: 10px;
-    font-size: 1.4em;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 200;
+    background: none;
+    border: none;
+    background: #f8f8fa;
+    transition: filter 0.2s ease;
+}
+
+.openTab:hover{
+    filter: brightness(90%);
+    cursor: pointer;
 }
 
 .left_side {
@@ -34,6 +117,7 @@
 }
 
 .configuracoes_popovergear {
+    display: none;
     margin-right: 20px;
     height: 60%;
     width: 50px;
@@ -78,12 +162,18 @@
         justify-content: center;
         align-items: center;
         font-size: 25px;
-        background: #f3b66f;
+        background: none;
         border: none;
         margin-left: 10px;
+        transition: background 0.2s ease;
     }
 
-    .hamburger:active{
-        background: #dba464;
+    .hamburger.active{
+        background: #4b4b4b;
+        color: #fff;
+    }
+
+    .tabs{
+        width: 80%;
     }
 }

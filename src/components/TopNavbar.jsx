@@ -1,6 +1,8 @@
 import styles from "./TopNavbar.module.css";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import lmc_logo from "../assets/lmcplusv2.png";
+import casa from '../assets/casa.png';
 
 function TopNavbar({
     open,
@@ -25,23 +27,21 @@ function TopNavbar({
                     ☰
                 </button>
 
-                <Link className={styles.img_link} onClick={irHome}><img src={lmc_logo} alt="Logo LMC" height="70px" width="140px" className={styles.lmc_logo}></img></Link>
-                <span className={styles.page_atual}>Dashboard</span>
+                <Link className={styles.img_link} onClick={irHome}><img src={lmc_logo} alt="Logo LMC" height="50px" width="100px" className={styles.lmc_logo}></img></Link>
+
             </div>
 
-            <div className={styles.right_side}>
-                <button className={styles.configuracoes_popovergear} onClick={() => setOpen(!open)}></button>
+            {/* Sistema de abas */}
+            <div className={styles.tabs}>
+                <Link title="Início" onClick={irHome} className={`${styles.tab} ${styles.inicio}`}>
+                    <img src={casa} width="30px"/>
+                    <span>Início</span>
+                    <button className={styles.closeTab}>✕</button>
+                </Link>
+                <button className={styles.openTab}>+</button>
             </div>
 
-            {open && (
-                <div className={styles.configuracoes_botao_container}>
-                    <div className={styles.configuracoes_botao}>Perfil</div>
-                    <div className={styles.configuracoes_botao}>Acesso</div>
-                    <div className={styles.configuracoes_botao}>Aparência</div>
-                    <div className={styles.configuracoes_botao}>Acessibilidade</div>
-                    <div className={styles.configuracoes_botao}>Autenticação</div>
-                </div>
-            )}
+            
         </div>
     ); 
 }
