@@ -17,7 +17,7 @@ export function Dashboard() {
         navigate('/Dashboard');
     };
 
-    const [open, setOpen] = useState(false);
+
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -32,8 +32,6 @@ export function Dashboard() {
 
             {/* Chama o componente da nav horizontal no topo */}
             <TopNavbar
-                open={open}
-                setOpen={setOpen}
                 menuOpen={menuOpen}
                 setMenuOpen={setMenuOpen}
             />
