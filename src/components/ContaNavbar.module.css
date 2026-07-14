@@ -1,0 +1,47 @@
+.ContaNavbar{
+    width: 300px;
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    border-right: 1px solid #E4E4E7;
+}
+
+.areaTitulo{
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaTitulo span{
+    font-size: 3em;
+    font-weight: 430;
+    color: #666666;
+}
+
+.button{
+    min-height: 40px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #616161;
+    transition: background 0.1s ease;
+}
+
+.button:hover{
+    cursor: pointer;
+    background: #eeeef0;
+}
+
+.button img{
+    margin: 0 20px;
+    filter: opacity(60%);
+}
