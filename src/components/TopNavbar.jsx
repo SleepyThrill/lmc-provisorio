@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import lmc_logo from "../assets/lmcplusv2.png";
 import casa from '../assets/casa.png';
 
-function TopNavbar({
+export function TopNavbar({
     open,
     setOpen,
     menuOpen,
@@ -45,5 +45,3 @@ function TopNavbar({
         </div>
     ); 
 }
-
-export default TopNavbar;

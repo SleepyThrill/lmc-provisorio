@@ -1,7 +1,7 @@
 import styles from './Perfil.module.css';
-import TopNavbar from '../components/TopNavbar.jsx';
-import SideNavbar from '../components/SideNavbar.jsx';
-import ContaNavbar from "../components/ContaNavbar.jsx";
+import { TopNavbar } from '../components/TopNavbar.jsx';
+import { SideNavbar } from '../components/SideNavbar.jsx';
+import { ContaNavbar } from "../components/ContaNavbar.jsx";
 import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 import imageperfil from '../assets/imageperfil.jfif';

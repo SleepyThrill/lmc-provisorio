@@ -22,5 +22,3 @@ export function ContaNavbar(){
         </div>
     )
 }
-
-export default ContaNavbar;

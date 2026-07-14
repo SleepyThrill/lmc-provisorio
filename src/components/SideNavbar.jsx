@@ -5,8 +5,16 @@ import tabela from "../assets/tabela.png";
 import user from "../assets/usuario.png";
 import diario from "../assets/diario.png";
 import config from "../assets/config.png"
+import { useNavigate, Link } from 'react-router-dom';
 
-function SideNavbar({ menuOpen }) {
+
+export function SideNavbar({ menuOpen }) {
+    const navigate = useNavigate();
+
+    const irPerfil = () => {
+        navigate('/Perfil')
+    }
+    
     return (
         <nav className={`${styles.vertical_bar} ${menuOpen ? styles.open : ""}`}>
             <div className={styles.areaButton}>
@@ -37,15 +45,14 @@ function SideNavbar({ menuOpen }) {
                 <span>Guias</span>
             </div>
 
-            <div className={`${styles.areaButton} ${styles.config}`}>
-                <button className={styles.button}>
+            <form method="post" onSubmit={irPerfil} className={`${styles.areaButton} ${styles.config}`}>
+                <button type="submit" className={styles.button}>
                     <img src={config} width="40px"/>
                 </button>
                 <span>Configurações</span>
-            </div>
+            </form>
 
         </nav>
     );
 }
 
-export default SideNavbar;

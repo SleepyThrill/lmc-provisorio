@@ -7,8 +7,8 @@ import diario from '../assets/diario.png'
 import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Subtitles } from 'lucide-react';
-import TopNavbar from "../components/TopNavbar.jsx";
-import SideNavbar from "../components/SideNavbar";
+import { TopNavbar } from "../components/TopNavbar.jsx";
+import { SideNavbar } from "../components/SideNavbar";
 
 export function Dashboard() {
     const navigate = useNavigate();
