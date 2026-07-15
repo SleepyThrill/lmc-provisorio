@@ -6,6 +6,11 @@
     position: fixed;
     z-index: 50;
     display: flex;
+    overflow-x: auto;
+}
+
+.horizontal_bar::-webkit-scrollbar{
+    display: none;
 }
 
 .hamburger{
